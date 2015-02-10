@@ -3,8 +3,11 @@ window.ScratchPad =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert('Hello from Backbone!')
+  initialize: ->
+    new @Routers.ScratchPadRouter
+    Backbone.history.start(pushState: true)
 
 window.App = window.ScratchPad
+
 $(document).ready ->
   ScratchPad.initialize()
