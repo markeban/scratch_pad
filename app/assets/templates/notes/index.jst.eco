@@ -1,0 +1,12 @@
+<h1>Note Index Page</h1>
+<ul>
+  <% for note in @notes: %>
+    <li>
+      <dl>
+        <dt>Title</dt>
+        <dd><a href="/notes/<%= note.id  %>"><%= note.title %></a></dd>
+        <dt>Content</dt>
+        <dd><%= note.content %></dd>
+    </li>
+  <% end %>
+</ul>
