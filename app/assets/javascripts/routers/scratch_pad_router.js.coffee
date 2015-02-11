@@ -9,6 +9,6 @@ class App.Routers.ScratchPadRouter extends Backbone.Router
 
 
   showNote: (id) ->
-    model = App.AllNotes[id - 1]
+    model = App.AllNotes.get(id)
     view = new App.Views.EditNote(model: model)
     $('#container').html(view.render().el)

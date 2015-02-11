@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'notes#index'
-  resources :notes, only: [:index, :show]
+  resources :notes, only: [:index, :create, :update, :destroy]
+
+  get '*any' => 'notes#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

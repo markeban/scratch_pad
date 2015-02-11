@@ -1,6 +1,6 @@
 <h1>Note Index Page</h1>
 <ul>
-  <% for note in @notes: %>
+  <% for note in @notes.models: %>
     <li>
       <dl>
         <dt>Title</dt>
